@@ -1,0 +1,55 @@
+/* 👉 Fondo visible solo debajo del menú */
+.contenido {
+  width: 100%;
+  min-height: calc(100vh - 188px);
+  background-image: url('../assets/img/fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px; /* un poco de espacio para móviles */
+  text-align: center;
+}
+
+.texto-central {
+  max-width: 700px;
+  background-color: rgba(247, 245, 243, 0.85); /* fondo blanco semitransparente */
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: #003148;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.texto-central h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: #268864;
+}
+
+.texto-central p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+body, html {
+  height: auto;
+  margin: 0;
+  padding: 0;
+  /* No overflow aquí, así el resto de páginas pueden hacer scroll */
+}
+
+.index-container {
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center;     /* Centra horizontalmente */
+  overflow: hidden;
+}
