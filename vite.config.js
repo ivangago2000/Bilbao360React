@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Bilbao360React/', // Ajusta esto si tu repo tiene otro nombre
   plugins: [react()],
   test: {
     environment: 'jsdom',
