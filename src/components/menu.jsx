@@ -16,7 +16,9 @@ function Menu() {
 
   return (
     <div className="menu">
-      <img src={logo} alt="Logo" className="logo" />
+      <Link to="/" onClick={() => setOpen(false)}>
+        <img src={logo} alt="Logo" className="logo" />
+      </Link>
       <nav>
         <div className={`menu-links${open ? ' active' : ''}`} id="menuLinks">
           <Link to="/" onClick={() => setOpen(false)}>INICIO</Link>
