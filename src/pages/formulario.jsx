@@ -1,21 +1,37 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import '../css/formulario.css';
 import '../css/menu.css';
 import Menu from '../components/menu';
 
 function Formulario() {
+  const formRef = useRef(null);
+  const [mensaje, setMensaje] = useState('');
+
+  const limpiarFormulario = () => {
+    if (formRef.current) {
+      formRef.current.reset();
+    }
+  };
+
   return (
     <>
       <Menu />
       <div className="formulario-container">
         <div className="texto-central">
           <h1>Contáctanos</h1>
+          {mensaje && <div className="mensaje-efimero">{mensaje}</div>}
           <form
+            ref={formRef}
             action="https://formsubmit.co/ivan.gago@estudioenpenascal.com"
             method="POST"
+            onSubmit={() => {
+              setMensaje('Gracias por rellenar el formulario');
+              setTimeout(() => {
+                setMensaje('');
+                limpiarFormulario();
+              }, 2000);
+            }}
           >
-            <input type="hidden" name="_captcha" value="false" />
-
             <div className="form-group">
               <input
                 type="text"

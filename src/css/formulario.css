@@ -89,6 +89,24 @@ button[type="submit"]:hover {
   background-repeat: no-repeat;
 }
 
+.mensaje-efimero {
+  background: #268864;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 
 /* --- Responsive para móviles --- */
 @media (max-width: 600px) {
