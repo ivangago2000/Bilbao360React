@@ -1,7 +1,8 @@
 import React from 'react';
+import { filterLugarByTipo } from '../services/lugarFilters';
 
 function FiltrarPorTipo({ lugares, tipo }) {
-  const lugaresFiltrados = lugares.filter(lugar => lugar.tipo === tipo);
+  const lugaresFiltrados = filterLugarByTipo(lugares, tipo);
 
   return (
     <div>
